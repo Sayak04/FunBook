@@ -1,0 +1,20 @@
+The app starts from index.js which is the entry point, where we create the root element from index.html and then render the contents of the root element.
+
+We import the App component and render it inside this index.js file.
+
+Our main parent component is the App Component, which is here written in class component.
+
+-- App.js --
+We call the constructor which is the first method to be called. We declare the states(books an empty array and searchField, a string) of the App.
+
+We then use the componentDidMount lifecycle method, here we call the API to get the list of the books, and then update our state(books) with the data that we got from the API using this.setState method, inside this we use a callback to update the state.
+
+After this we render the App UI.
+
+The way the App renders or calls is:-
+Constructor -> render method -> componentDidMount
+
+We use two components in the APP, i.e SearchBox which contains the search field and CardList which contains the cards we display in the UI.
+
+In the searchField we filter our data as given by the search field, so we declare a function filteredBooks where we use the filter method and filter our data of the books according to the search field. We have declared this fucntion outside as we always want the filter to work on the whole list of data that we got from the API.
+
